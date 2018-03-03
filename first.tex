@@ -7,20 +7,43 @@
 \usepackage[UTF8]{ctex}
 \usepackage{amsmath}
 \usepackage{graphicx}
+%设置行间距离
+\usepackage{setspace}
+
+%设置目录显示深度
+%\setcounter{tocdepth}{2} % Show sections
+%\setcounter{tocdepth}{2} % + subsections
+%\setcounter{tocdepth}{3} % + subsubsections
+%\setcounter{tocdepth}{4} % + paragraphs
+%\setcounter{tocdepth}{5} % + subparagraphs
+
 
 \title{Latex学习教程}
 \date{2018-03-03}
 \author{zuisixian}
+
+
+
+
 \begin{document}
 %we don't want to have that page number showing up there，remove it
 \pagenumbering{gobble} 
 \maketitle
+%设置double行间距
+\doublespacing
+
+\tableofcontents
+%恢复
+\doublespacing
+
 \newpage
 %hanging it back on the next page numbers
 \pagenumbering{arabic}
 
 
   \section{环境搭建}
+  %用于在本section中设置目录的显示深度
+  %\addtocontents{toc}{\setcounter{tocdepth}{1}} % Set depth to 1
   下载latex编译器MikTex/CTEX/TEXLive都可以，编译器的话可以选择TexMaker,TexStudio，
   或者就是普通的编辑器如atom、VSCode。
     \subsection{下载MikTex,TexMaker}
@@ -39,6 +62,8 @@
     \paragraph{}
       这是一个段落
 
+    
+
 
 
 
@@ -56,6 +81,11 @@
   \end{figure}
   
   图 \ref{fig:cat1} shows a cat.
+
+  \begin{appendix}
+    \listoffigures
+    \listoftables
+  \end{appendix}
 
 
 
