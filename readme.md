@@ -1,5 +1,10 @@
 # latex 学习
 
+## package下载地址
+[package](http://mirrors.cqu.edu.cn/CTAN/macros/latex/)
+这里面包含各种各样的package，直接下载后放入Style文件夹中进行引用。
+
+
 ps:先在本地已经有个了这个仓库，需要把这个仓库上传。然后在github上新建了一个仓库，写了`.gitignore`和`License`，需要将这两个项目合并。
 1. 关联远程仓库
 `git remote add origin git@github.com:zuisixian/latex-tutorial.git`
@@ -34,6 +39,33 @@ ps:先在本地已经有个了这个仓库，需要把这个仓库上传。然�
 
 在section之中
 `\addtocontents{toc}{\setcounter{tocdepth}{1}} % Set depth to 1`
+
+## 添加参考文献
+1. 新增 *.bib文件，在这个文件里面添加参考文献。
+```
+@BOOK{melissa:1,
+AUTHOR="melissa Yang",
+TITLE="THE REFERENCE ARTICLE",
+PUBLISHER="NONE",
+YEAR="2018",
+}
+
+```
+
+
+2. 在正文中进行引用，`\cite{melissa:1}`
+
+
+
+生成PDF命令
+```
+pdflatex first.tex
+bibtex first
+pdflatex first.tex
+pdflatex first.tex
+
+```
+
 
 
 
